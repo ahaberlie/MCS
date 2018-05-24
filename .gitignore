@@ -9,7 +9,7 @@
 *.npy
 *.webm
 *.gif
-*.jpeg
+*.prj
 *.txt
 *.db
 *.nc
@@ -21,6 +21,10 @@
 *.job
 *.tar
 *.lock
+*.xml
+*.sbn
+*.tif
+*.sbx
 *.tar.gz
 *.nc
 *.shp

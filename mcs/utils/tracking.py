@@ -201,7 +201,7 @@ def rematch_tracks(df, rng, prefix, crsr, ssr, p, buffer_size=25, norm=None):
 
         dff = df[(pd.to_datetime(df.datetime)>(d + datetime.timedelta(minutes=15))) & \
                  (pd.to_datetime(df.datetime)<=(d + datetime.timedelta(minutes=60))) & \
-                 (df.storm_loc == 's')]
+                 (df.storm_loc == 's') & (~df.rematched)]
 
         if len(dfs) > 0 and len(dff) > 0:
 
