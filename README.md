@@ -2,6 +2,12 @@
 
 MCS Segmentation, Classification, and Tracking Project: Data, Analyses, and Results
 
+<strong>JOC Reviewers--you can examine the following notebooks, data, and code associated with the article in review.</strong>
+<strong>Use the article number to access data. </strong>
+
+<p><a href="https://github.com/ahaberlie/MCS/blob/Add-Future/mcs_future/notebooks/MCS_QLCS_NonQLCS_Stats.ipynb"></a>Stats on Midwest events</p>
+<p><a href="https://github.com/ahaberlie/MCS/blob/Add-Future/mcs_future/notebooks/Mapping_Spatial_Information.ipynb"></a>Map generation</p>
+
 Requirements:
 
 <ul>

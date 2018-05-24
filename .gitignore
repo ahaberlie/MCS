@@ -9,6 +9,11 @@
 *.npy
 *.webm
 *.gif
+*.prj
+*.sbx
+*.sbn
+*.xml
+*.tif
 *.jpeg
 *.txt
 *.db
