@@ -16,6 +16,7 @@
 *.hdf
 *.bin
 *.h5
+*.npz
 *.zip
 *.xlsx
 *.job

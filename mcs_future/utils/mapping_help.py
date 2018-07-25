@@ -188,39 +188,6 @@ def get_point_subset(df, outline, wrf_ref=None, within=True):
     
     return df_subset
     
-    
-def NOWrad_to_lon_lat(xpoints, ypoints, xMin=0, yMin=0):
-    """Convert NOWrad x,y grid coordinates to latitude,
-    longitude coordinates.
-    
-    Can even convert a subset of image if you know 
-    the west and north edges.
-    
-    Parameters
-    ----------
-    xpoints: (N, ) ndarray
-        Array of x coordinates to be converted
-    ypoints: (N, ) ndarray
-        Array of y coordinates to be converted
-    xMin: int
-        Relative most westward x coordinate if image is clipped
-    yMin: int
-        Relative most northward y coordinate if image is clipped
-    """
-
-    #See: NOWrad Technical Note
-    lats = 53 - (yMin + ypoints) * .0180
-    lons = (xMin + xpoints) * .0191 - 130
-    
-    return lons, lats
-    
-def get_NOWrad_conus_lon_lat():
-
-    x = np.array(list(range(0,3661)))
-    y = np.array(list(range(0,1837)))
-
-    return NOWrad_to_lon_lat(x, y)
-    
 def draw_states(ax):
         
     shapename = 'admin_1_states_provinces_lakes_shp'
@@ -339,10 +306,8 @@ def quantize_season(value):
         return 5
     elif value >= 90 and value < 120:
         return 6
-    elif value >= 120 and value < 150:
+    elif value >= 120:
         return 7
-    elif value >= 150:
-        return 8
 
 def draw_states(ax):
         
@@ -366,7 +331,7 @@ def draw_midwest(ax):
                               
 def get_season_mcs(run, season, dbz, mw=False):
     
-    shapename = "../data/shapefiles/" + run + "/" + season + '_' + dbz + '_pgw'
+    shapename = "F:/shapefiles_day/" + run + "/" + season + '_' + dbz + '_pgw'
     shp = shpreader.Reader(shapename)
     geom = shp.geometries()
     
