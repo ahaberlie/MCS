@@ -177,16 +177,9 @@ def get_point_subset(df, outline, wrf_ref=None, within=True):
     crs = {'init': 'epsg:4326'}
     points = gpd.GeoDataFrame(df, crs=crs, geometry=geometry)
 
-    points_ = gpd.sjoin(points, outline, how="inner", op='intersects')
-
-    storm_nums = np.unique(points_.storm_num)
-
-    if within:
-        df_subset = points[points.storm_num.isin(storm_nums)].copy()
-    else:
-        df_subset = points[~points.storm_num.isin(storm_nums)].copy()
+    points_ = gpd.sjoin(points, outline, how="inner", op='within')
     
-    return df_subset
+    return points_
     
 def draw_states(ax):
         
@@ -331,7 +324,7 @@ def draw_midwest(ax):
                               
 def get_season_mcs(run, season, dbz, mw=False):
     
-    shapename = "F:/shapefiles_day/" + run + "/" + season + '_' + dbz + '_pgw'
+    shapename = "../data/shapefiles/raw_data/shapefiles_day/" + run + "/" + season + '_' + dbz + '_pgw'
     shp = shpreader.Reader(shapename)
     geom = shp.geometries()
     
