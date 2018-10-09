@@ -21,11 +21,16 @@
 *.hdf
 *.bin
 *.h5
+*.npz
 *.zip
 *.xlsx
 *.job
 *.tar
 *.lock
+*.xml
+*.sbn
+*.tif
+*.sbx
 *.tar.gz
 *.nc
 *.shp
