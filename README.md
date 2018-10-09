@@ -2,6 +2,18 @@
 
 MCS Segmentation, Classification, and Tracking Project: Data, Analyses, and Results
 
+<strong>IJC Reviewers, you can examine the following notebooks, data, and code associated with the article in review.</strong>
+<strong>Use the article number to access data. </strong>
+
+<p><a href="https://github.com/ahaberlie/MCS/blob/Add-Climo/mcs_climo/notebooks/Basic_Stats.ipynb">Basic MCS Stats</a></p>
+<p><a href="https://github.com/ahaberlie/MCS/blob/Add-Climo/mcs_climo/notebooks/Spatial_Climatology.ipynb">Climatology</a></p>
+
+<strong>JOC Reviewers, you can examine the following notebooks, data, and code associated with the article in review.</strong>
+<strong>Use the article number to access data. </strong>
+
+<p><a href="https://github.com/ahaberlie/MCS/blob/Add-Future/mcs_future/notebooks/MCS_QLCS_NonQLCS_Stats.ipynb">Stats on Midwest event</a>s</p>
+<p><a href="https://github.com/ahaberlie/MCS/blob/Add-Future/mcs_future/notebooks/Mapping_Spatial_Information.ipynb">Map generation</a></p>
+
 Requirements:
 
 <ul>
